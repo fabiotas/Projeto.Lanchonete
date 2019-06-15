@@ -1,0 +1,39 @@
+﻿<div id="area">
+    <form action="/Comodo/Adiciona" method="post">
+        <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input name="comodo.Nome" class="form-control" type="text" id="nome" />
+        </div>
+
+        <div class="form-group">
+            <label for="nome">Descricao:</label>
+            <input name="comodo.Descricao" class="form-control" type="text" id="descricao" />
+        </div>
+
+        <div class="form-group">
+            <label for="nome">Qtde de Componente:</label>
+            <input name="comodo.qtdeComponente" class="form-control" type="text" id="qtdeComponente" />
+        </div>
+
+        <div class="form-group">
+            <label for="IndAtivo">Usuario:</label>
+            <select id="IndAtivo" name="comodo.IndAtivo" class="form-control">
+                <option value="0" selected="0">Inativo</option>
+                <option value="1" selected="1">Ativo</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="usuario">Usuario:</label>
+            <select id="usuario" name="comodo.IdUsuario" class="form-control">
+                @foreach (var c in ViewBag.Usuarios)
+                {
+                    <option value="@c.Id" selected="@c.Id.Equals(ViewBag.Comodo.IdUsuario)">@c.Nome</option>
+                }
+            </select>
+        </div>
+
+        
+        <input type="submit" class="btn btn-primary" value="Cadastrar" />
+    </form>
+</div>
