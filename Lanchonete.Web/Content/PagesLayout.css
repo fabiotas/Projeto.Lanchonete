@@ -16,3 +16,11 @@
     width: 720px;
     height: 540px;
 }
+
+#div3d {
+    Width: 100px;
+    Height: 100px;
+    /*Border: solid 1px;*/
+    Border-radius: 3px;
+    Box-shadow: 3px 3px 20px 3px Black;
+}
